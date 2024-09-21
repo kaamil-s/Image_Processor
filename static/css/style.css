@@ -1,15 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+.protest-guerrilla-regular {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 4rem;
+    /* Adjust size as needed */
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    /* Gradient background */
+    -webkit-background-clip: text;
+    /* Clip background to text */
+    color: transparent;
+    /* Make the text itself transparent */
+}
+
+html,
+body {
+    height: 100%;
+    /* Ensure the body takes full height */
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full height */
 }
 
 .container {
+    flex: 1;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -38,17 +61,112 @@ button:hover {
     background-color: #218838;
 }
 
-#preview img {
-    max-width: 100%;
-    margin-top: 20px;
-}
-
 .navbar {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .ms-auto {
-    margin-left: auto; 
+    margin-left: auto;
 }
 
+
+#preview,
+#processed-image-container {
+    width: 400px;
+    /* Set a fixed width for both containers */
+    height: auto;
+    /* Automatic height */
+    margin: 20px auto;
+    /* Center the containers */
+    padding: 20px;
+    /* Space inside the container */
+    background-color: #f8f9fa;
+    /* Light background color */
+    border: 1px solid #ced4da;
+    /* Light gray border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+#preview:hover #processed-image-container:hover {
+    transform: scale(1.02);
+    /* Slight zoom effect on hover */
+}
+
+#preview img,
+#processed-image-container img {
+    max-width: 80%;
+    /* Set to a smaller size */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 5px;
+    /* Rounded corners for images */
+    display: block;
+    /* Ensures image is treated as a block element */
+    margin-left: auto;
+    /* Center the image horizontally */
+    margin-right: auto;
+    /* Center the image horizontally */
+}
+
+footer {
+    background-color: #0d3359;
+    /* Optional footer background */
+    color: white;
+    /* Text color */
+    padding: 2px 2px;
+    /* Padding for footer */
+    position: relative;
+    /* Footer positioning */
+    bottom: 0;
+    /* Stick to the bottom */
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    /* Center text */
+}
+
+
+.card {
+    border: 5px solid #2575fc ;
+    /* Light border for cards */
+    border-radius: 3.0rem;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.card-title {
+    color: #007bff;
+    /* Bootstrap primary color */
+    margin-bottom: 10px;
+    /* Space below the title */
+    text-align: center;
+}
+
+.card-body {
+    text-align: justify;
+    padding: 20px;
+    align-content: center;
+    align-items: center;
+    /* Consistent padding inside cards */
+}
+
+#image_about img {
+    width: 40%;          
+    height: auto;       
+    display: block;     
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+ul {
+    padding-left: 20px;
+    /* Indent list items */
+}

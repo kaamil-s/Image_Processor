@@ -25,7 +25,6 @@ def processimage(filename, operation, output_format):
     base_name = filename.split('.')[0]
     imgProcessed = None
 
-    
     if operation == "cgray":
         imgProcessed = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         #newfilename = f"static/{base_name}.png"  
